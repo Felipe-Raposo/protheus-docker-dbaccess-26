@@ -1,6 +1,6 @@
 # dbAccess 26.x.y.z
 
-Imagem Docker para execução do **TOTVS dbAccess** (build 26.1.0.0) em ambiente containerizado.
+Imagem Docker para execução do **TOTVS dbAccess** (build 26.1.0.1) em ambiente containerizado.
 
 ## Descrição
 
@@ -10,7 +10,7 @@ Este projeto monta uma imagem Docker dbAccess 26.x.y.z sobre Oracle Linux 9. A i
 
 - **Base:** Oracle Linux 9
 - **Drivers ODBC:** psqlODBC 18 (`postgresql18-odbc`, repositório PGDG) e Microsoft ODBC Driver 18 for SQL Server
-- **dbAccess:** build 26.1.0.0, porta TCP 7890 (default)
+- **dbAccess:** build 26.1.0.1, porta TCP 7890 (default)
 - **Configuração dinâmica:** Banco de dados, usuário e senha definidos via variáveis de ambiente `PROTHEUS_DB`, `PROTHEUS_USER` e `PROTHEUS_PASSWORD`
 
 ## Pré-requisitos
@@ -37,7 +37,7 @@ make release_latest
 Gera as tags:
 
 - `feliperaposo/protheus-dbaccess:26`
-- `feliperaposo/protheus-dbaccess:26.1.0.0`
+- `feliperaposo/protheus-dbaccess:26.1.0.1`
 - `feliperaposo/protheus-dbaccess:latest`
 
 ## Estrutura interna (referência)
