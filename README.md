@@ -4,7 +4,9 @@ Imagem Docker para execução do **TOTVS dbAccess** (build 26.1.0.1) em ambiente
 
 ## Descrição
 
-Este projeto monta uma imagem Docker dbAccess 26.x.y.z sobre Oracle Linux 9. A imagem é útil para ambientes de desenvolvimento, testes ou orquestração (Kubernetes, Docker Compose, etc.).
+Este projeto monta uma imagem Docker dbAccess 26.1.0.1 sobre Oracle Linux 9. Serve para desenvolvimento, testes ou orquestração (Kubernetes, Docker Compose, etc.).
+
+Se estiver buscando um ambiente completo com Protheus + License + dbAccess + Postgres, acesse esse [projeto](https://github.com/Felipe-Raposo/protheus-docker-compose).
 
 ### Características
 
@@ -17,6 +19,7 @@ Este projeto monta uma imagem Docker dbAccess 26.x.y.z sobre Oracle Linux 9. A i
 ## Pré-requisitos
 
 - Docker (com BuildKit habilitado para build)
+- Host de build `linux/amd64` (`make build` passa `--platform=linux/amd64`)
 
 ## Build
 
