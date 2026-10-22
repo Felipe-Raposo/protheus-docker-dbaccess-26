@@ -11,6 +11,7 @@ Este projeto monta uma imagem Docker dbAccess 26.x.y.z sobre Oracle Linux 9. A i
 - **Base:** Oracle Linux 9
 - **Drivers ODBC:** psqlODBC 18 (`postgresql18-odbc`, repositório PGDG) e Microsoft ODBC Driver 18 for SQL Server
 - **dbAccess:** build 26.1.0.1, porta TCP 7890 (default)
+- **DBAPI:** `dbapi.so` publicado em `http://<host>:7891/dbapi.so` para o AppServer baixar na inicialização
 - **Configuração dinâmica:** Banco de dados, usuário e senha definidos via variáveis de ambiente `PROTHEUS_DB`, `PROTHEUS_USER` e `PROTHEUS_PASSWORD`
 
 ## Pré-requisitos
@@ -44,6 +45,7 @@ Gera as tags:
 
 - **Entrypoint:** `/dbaccess.sh`
 - **Binários:** `/dbaccess/multi/dbaccess64`, `/dbaccess/library/dbaccess64.so`
+- **DBAPI:** `/dbaccess/client/dbapi.so`, servido na porta TCP 7891 antes do `dbaccess64`
 - **Configuração:** `/dbaccess/multi/dbaccess.ini` (parâmetros `{{PROTHEUS_DB}}`, `{{PROTHEUS_USER}}` e `{{PROTHEUS_PASSWORD}}` substituídos em runtime)
 
 ## Licença
